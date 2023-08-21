@@ -4,10 +4,22 @@
  */
 package com.Js.Bill_service.ProductPTO;
 
+import com.Js.Bill_service.Entity.Bill;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  *
  * @author Asus
  */
+
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
 public class Response_bill {
+    
+    private Product product;
+    private Bill bill;
     
 }
