@@ -44,9 +44,10 @@ public class Bill {
     
     @Column(nullable = false)
     private String paymentCondition;
-    
-    @Column(nullable = false)
+
     private int productId;
-        
     
+    private int supplierId;
+        
+   
 }

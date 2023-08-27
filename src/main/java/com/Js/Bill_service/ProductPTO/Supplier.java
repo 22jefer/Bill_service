@@ -4,7 +4,6 @@
  */
 package com.Js.Bill_service.ProductPTO;
 
-import com.Js.Bill_service.Entity.Bill;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,11 +14,20 @@ import lombok.NoArgsConstructor;
  */
 
 @AllArgsConstructor
-@Data
 @NoArgsConstructor
-public class Response_bill {
+@Data
+public class Supplier {
     
-    private Product product;
-    private Bill bill;
+    private int id;
+
+    private String code;
+
+    private String tradeName;
+
+    private String email;
+
+    private String phone;
+
+    private String address;
     
 }
