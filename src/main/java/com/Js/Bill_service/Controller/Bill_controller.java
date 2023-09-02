@@ -5,7 +5,7 @@
 package com.Js.Bill_service.Controller;
 
 import com.Js.Bill_service.Entity.Bill;
-import com.Js.Bill_service.ProductPTO.Response_bill;
+import com.Js.Bill_service.ProductPTO.Response_product;
 import com.Js.Bill_service.Service.Bill_service;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -37,11 +37,16 @@ public class Bill_controller {
         return bill_service.saveBill(bill);
     }
     
-    @GetMapping("/{id}")
-    public Response_bill getBillById (@PathVariable Integer id){
-        return bill_service.response_bill(id);
+    @GetMapping("/response/{id}")
+    public Response_product response (@PathVariable Integer id){
+        return bill_service.response(id);
     }
     
+    @GetMapping("/{id}")
+    public Bill getResponse_billById (@PathVariable Integer id){
+        return bill_service.getBillById(id);
+    }
+
     @GetMapping
     public List<Bill> AllBill (){
         return bill_service.AllBill();
